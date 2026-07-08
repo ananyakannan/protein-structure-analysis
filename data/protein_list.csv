@@ -1,0 +1,12 @@
+gene_name,accession,group
+BCL2,P10415,anti-apoptotic
+BCL2L1,Q07817,anti-apoptotic
+MCL1,Q07820,anti-apoptotic
+BCL2A1,Q16548,anti-apoptotic
+BCL2L2,Q92843,anti-apoptotic
+BAX,Q07812,pro-apoptotic
+BAK1,Q16611,pro-apoptotic
+BID,P55957,pro-apoptotic
+BAD,Q92934,pro-apoptotic
+BIK,Q13323,pro-apoptotic
+BBC3,Q9BXH1,pro-apoptotic
