@@ -24,6 +24,8 @@ on ___ (mention your BCL2/breast carcinoma paper briefly here).
 ## Status
 🚧 In progress — Day 1: project setup complete
 🚧 In progress — Day 2 complete: protein list finalized, sequences fetched from UniProt (data/bcl2_family_proteins.fasta)
+🚧 In progress — Day 3 complete: protein structural properties calculated (MW, instability index, aromaticity, GRAVY) via Biopython ProtParam, saved to data/protein_properties.csv
+
 
 ## Folder Structure
 - `data/` — raw and processed protein data
