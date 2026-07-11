@@ -26,6 +26,8 @@ on ___ (mention your BCL2/breast carcinoma paper briefly here).
 🚧 In progress — Day 2 complete: protein list finalized, sequences fetched from UniProt (data/bcl2_family_proteins.fasta)
 🚧 In progress — Day 3 complete: protein structural properties calculated (MW, instability index, aromaticity, GRAVY) via Biopython ProtParam, saved to data/protein_properties.csv
 🚧 In progress — Day 4 complete: Seaborn introduced (histplot, kdeplot) for molecular weight and instability index distributions
+🚧 In progress — Day 5 complete: group comparisons added (boxplot for instability index, violinplot for molecular weight) between anti- and pro-apoptotic proteins
+
 
 
 ## Folder Structure
