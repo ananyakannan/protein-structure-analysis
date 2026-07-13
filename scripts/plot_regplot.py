@@ -1,3 +1,4 @@
+"""Plots instability index vs GRAVY score with a fitted regression line to explore their relationship."""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt

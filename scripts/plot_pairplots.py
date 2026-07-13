@@ -1,3 +1,4 @@
+"""Generates a pairplot comparing all numeric protein properties at once, colored by anti-/pro-apoptotic group."""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt

@@ -1,3 +1,4 @@
+"""Reads protein sequences from FASTA, calculates structural properties using Biopython's ProtParam, and saves results to protein_properties.csv."""
 import pandas as pd
 from Bio import SeqIO
 from Bio.SeqUtils.ProtParam import ProteinAnalysis 

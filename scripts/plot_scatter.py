@@ -1,3 +1,4 @@
+"""Plots a scatterplot of protein length vs molecular weight to check the expected positive relationship."""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt

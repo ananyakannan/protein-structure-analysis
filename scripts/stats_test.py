@@ -1,3 +1,4 @@
+"""Runs a Mann-Whitney U test comparing instability index between anti- and pro-apoptotic protein groups."""
 import pandas as pd
 from scipy.stats import mannwhitneyu
 #Step 1: Load our properties data

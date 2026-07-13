@@ -1,40 +1,67 @@
 # Protein Structure Data Analysis — BCL2 Family
 
 ## Overview
-This project analyzes structural properties (length, molecular weight, 
-instability index, etc.) of BCL2-family apoptosis proteins, comparing 
-pro-apoptotic vs anti-apoptotic groups. Built as part of my bioinformatics 
-learning journey, following ___ (name your Project 1 and 2 here for continuity).
+This project analyzes structural properties of 11 BCL2-family apoptosis 
+proteins (5 anti-apoptotic, 6 pro-apoptotic), using data fetched directly 
+from UniProt. It builds on my previous projects — [Project 1: DNA Sequence 
+Analyzer] and [Project 2: Gene Expression Analyzer] — extending my Python 
+and bioinformatics skills into protein-level structural analysis and 
+statistical visualization with Seaborn.
 
 ## Biological Context
 BCL2-family proteins regulate apoptosis (programmed cell death) and are 
-frequently dysregulated in cancer — particularly relevant to my research 
-on ___ (mention your BCL2/breast carcinoma paper briefly here).
+frequently dysregulated in cancer. This project's protein selection and 
+analysis approach was directly informed by my research on BCL2-mediated 
+apoptotic pathway genes in invasive breast carcinoma using TCGA data.
 
 ## Proteins Studied
-**Anti-apoptotic:** BCL2, BCL2L1, MCL1, BCL2A1, BCL2L2
-**Pro-apoptotic:** BAX, BAK1, BID, BAD, BIK, BBC3
+**Anti-apoptotic (5):** BCL2, BCL2L1, MCL1, BCL2A1, BCL2L2
+**Pro-apoptotic (6):** BAX, BAK1, BID, BAD, BIK, BBC3
+
+## Workflow
+1. Verified UniProt accession numbers for all 11 proteins
+2. Fetched amino acid sequences programmatically via UniProt's REST API
+3. Calculated structural properties (molecular weight, instability index, 
+   aromaticity, GRAVY score) using Biopython's ProtParam module
+4. Visualized distributions, group comparisons, relationships, and 
+   correlations using Seaborn
+5. Applied Mann-Whitney U testing to assess statistical significance of 
+   group differences
+
+## Key Findings
+- **Length and molecular weight are almost perfectly correlated (r=0.996)** 
+  — a sanity-check confirming data integrity
+- **Aromaticity and instability index are strongly negatively correlated 
+  (r=-0.76)** — more aromatic proteins tend to be more stable, consistent 
+  with known stabilizing interactions of aromatic residues in folded structures
+- **Pro-apoptotic proteins showed a higher median instability index** than 
+  anti-apoptotic proteins, though this difference did not reach statistical 
+  significance (Mann-Whitney p=0.082) — likely due to the small sample size (n=11)
+- **MCL1 is a consistent structural outlier** in size across multiple plots, 
+  while still following the same length-weight relationship as other family members
+
+## Sample Results
+
+### Correlation Heatmap
+![Correlation heatmap of protein properties](results/correlation_heatmap.png)
+
+### Group Comparison — Instability Index
+![Instability index boxplot with significance testing](results/instability_boxplot.png)
+
+### Pairplot — All Properties
+![Pairplot of all protein properties colored by group](results/pairplot.png)
 
 ## Tools Used
-- Python (Pandas, NumPy)
-- Biopython (ProtParam)
+- Python (Pandas, NumPy, requests)
+- Biopython (SeqIO, ProtParam)
 - Seaborn / Matplotlib
-- SciPy (statistical testing)
+- SciPy (Mann-Whitney U test)
+
+## Repository Structure
+- `data/` — protein list, fetched sequences (FASTA), calculated properties (CSV)
+- `scripts/` — analysis and plotting scripts
+- `results/` — generated figures (histograms, boxplots, violin plots, 
+  scatterplots, heatmap, pairplot)
 
 ## Status
-🚧 In progress — Day 1: project setup complete
-🚧 In progress — Day 2 complete: protein list finalized, sequences fetched from UniProt (data/bcl2_family_proteins.fasta)
-🚧 In progress — Day 3 complete: protein structural properties calculated (MW, instability index, aromaticity, GRAVY) via Biopython ProtParam, saved to data/protein_properties.csv
-🚧 In progress — Day 4 complete: Seaborn introduced (histplot, kdeplot) for molecular weight and instability index distributions
-🚧 In progress — Day 5 complete: group comparisons added (boxplot for instability index, violinplot for molecular weight) between anti- and pro-apoptotic proteins
-🚧 In progress — Day 6 complete: relationship plots added (scatterplot for length vs molecular weight, regplot for instability index vs GRAVY score)
-🚧 In progress — Day 7 complete: correlation matrix (.corr()) and heatmap added, revealing strong relationships (length-MW, aromaticity-instability index)
-🚧 In progress — Day 8 complete: Mann-Whitney U test applied to instability index (anti- vs pro-apoptotic), p-value annotated directly on boxplot (p=0.082, not significant at n=11)
-🚧 In progress — Day 9 complete: pairplot added, visualizing all pairwise relationships and distributions across properties, colored by anti-/pro-apoptotic group
-
-
-## Folder Structure
-- `data/` — raw and processed protein data
-- `scripts/` — analysis scripts
-- `notebooks/` — exploratory notebooks
-- `results/` — generated plots and figures
+✅ Complete

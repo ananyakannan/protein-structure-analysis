@@ -1,3 +1,4 @@
+"""Computes and visualizes a correlation matrix across all numeric protein properties using a heatmap."""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt

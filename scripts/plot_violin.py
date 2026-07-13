@@ -1,3 +1,4 @@
+"""Compares molecular weight between anti- and pro-apoptotic groups using a violin plot."""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt

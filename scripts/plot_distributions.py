@@ -1,3 +1,4 @@
+"""Plots a histogram showing the distribution of molecular weight across all 11 BCL2-family proteins."""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt

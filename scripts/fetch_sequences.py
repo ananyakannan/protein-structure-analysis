@@ -1,3 +1,4 @@
+"""Fetches protein sequences from UniProt using accession numbers in protein_list.csv and saves them as a combined FASTA file."""
 import pandas as pd
 import requests
 #Step 1: Load our protein list CSV

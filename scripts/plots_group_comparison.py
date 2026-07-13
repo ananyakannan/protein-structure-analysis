@@ -1,3 +1,4 @@
+"""Compares instability index between anti- and pro-apoptotic groups using a boxplot, annotated with a Mann-Whitney U test p-value."""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt

@@ -1,3 +1,4 @@
+"""Plots a KDE curve showing the distribution of instability index across all 11 BCL2-family proteins."""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
