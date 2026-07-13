@@ -29,7 +29,7 @@ on ___ (mention your BCL2/breast carcinoma paper briefly here).
 🚧 In progress — Day 5 complete: group comparisons added (boxplot for instability index, violinplot for molecular weight) between anti- and pro-apoptotic proteins
 🚧 In progress — Day 6 complete: relationship plots added (scatterplot for length vs molecular weight, regplot for instability index vs GRAVY score)
 🚧 In progress — Day 7 complete: correlation matrix (.corr()) and heatmap added, revealing strong relationships (length-MW, aromaticity-instability index)
-
+🚧 In progress — Day 8 complete: Mann-Whitney U test applied to instability index (anti- vs pro-apoptotic), p-value annotated directly on boxplot (p=0.082, not significant at n=11)
 
 
 ## Folder Structure
