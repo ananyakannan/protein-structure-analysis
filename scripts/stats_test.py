@@ -1,6 +1,4 @@
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 from scipy.stats import mannwhitneyu
 #Step 1: Load our properties data
 df = pd.read_csv("data/protein_properties.csv")
@@ -12,14 +10,3 @@ stat, p_value = mannwhitneyu(anti, pro)
 #Step 4: Print the result
 print(f"Mann-Whitney U statistic: {stat}")
 print(f"P-value: {p_value}")
-#Step 5: Creat a boxplot comparing instability_index across groups
-sns.boxplot(data=df, x="group", y="instability_index")
-#Step 6: Add labels
-plt.title("Instability Index: Anti-Apoptotic vs Pro-Apoptotic BCL2 Family Proteins")
-plt.xlabel("Protein Group")
-plt.ylabel("Instability Index")
-plt.ylim(0, 100)
-plt.text(0.5, 90, f"Mann-Whitney p = {p_value:.3f}", ha="center")
-#Step 7: Save the plot
-plt.savefig("results/instability_boxplot.png")
-plt.show()
